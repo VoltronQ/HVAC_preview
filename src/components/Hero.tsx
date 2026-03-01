@@ -141,12 +141,13 @@ export function Hero() {
                   </p>
                 </div>
 
-                <button
-                  onClick={openModal}
-                  className="w-full bg-gradient-to-r from-accent-orange to-accent-orange/80 hover:to-accent-orange text-white font-bold py-3 rounded-lg transition-all hover:shadow-lg"
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full border-white text-white hover:bg-white/10"
                 >
-                  Get Started Now
-                </button>
+                  View Reviews
+                </Button>
               </div>
             </div>
           </div>
