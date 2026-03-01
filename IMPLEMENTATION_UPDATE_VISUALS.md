@@ -5,22 +5,22 @@ This document outlines the plan to update the React + Vite + HVAC project with n
 ## ✅ Checklist
 
 ### Change 1: "Learn More" Button & Modal
-- [ ] Create `src/components/LearnMoreModal.tsx` following the `BookingModal` dialog pattern.
-- [ ] Implement the persuasive content in the modal with the specified bullet points.
-- [ ] Update `src/components/Hero.tsx` to include state for controlling the Learn More modal.
-- [ ] Wire the "Learn More" button in the Hero section to open the new modal.
+- [x] Create `src/components/LearnMoreModal.tsx` following the `BookingModal` dialog pattern.
+- [x] Implement the persuasive content in the modal with the specified bullet points.
+- [x] Update `src/components/Hero.tsx` to include state for controlling the Learn More modal.
+- [x] Wire the "Learn More" button in the Hero section to open the new modal.
 
 ### Change 2: Replace CTA in "Why Choose Us" (Trust)
-- [ ] Locate the `Trust` component in `src/components/Trust.tsx`.
-- [ ] Replace the "Schedule Your Visit Now" button with a "View Reviews" button.
-- [ ] Ensure the new button has a secondary style and does not perform any action.
+- [x] Locate the `Trust` component in `src/components/Trust.tsx`.
+- [x] Replace the "Schedule Your Visit Now" button with a "View Reviews" button.
+- [x] Ensure the new button has a secondary style and does not perform any action.
 
 ### Change 3: Alternating Timeline Layout
-- [ ] Identify the process component (`src/components/DiagnosticProcess.tsx`).
-- [ ] Update the desktop layout (`lg:` breakpoint) to alternate cards between left and right sides of the timeline.
-- [ ] Maintain a centered vertical timeline and dots on desktop.
-- [ ] Ensure the mobile layout remains a single column.
-- [ ] Use `index % 2` logic to toggle CSS classes for alternating sides.
+- [x] Identify the process component (`src/components/DiagnosticProcess.tsx`).
+- [x] Update the desktop layout (`lg:` breakpoint) to alternate cards between left and right sides of the timeline.
+- [x] Maintain a centered vertical timeline and dots on desktop.
+- [x] Ensure the mobile layout remains a single column.
+- [x] Use `index % 2` logic to toggle CSS classes for alternating sides.
 
 ---
 

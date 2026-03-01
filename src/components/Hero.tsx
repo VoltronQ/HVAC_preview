@@ -1,9 +1,12 @@
+import { useState } from 'react'
 import { useBookingModal } from '@/hooks/useBookingModal'
 import { ArrowRight, Shield, Clock, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { LearnMoreModal } from './LearnMoreModal'
 
 export function Hero() {
   const { openModal } = useBookingModal()
+  const [isLearnMoreOpen, setIsLearnMoreOpen] = useState(false)
 
   return (
     <section className="relative bg-gradient-dark text-white overflow-hidden py-16 sm:py-20 lg:py-28">
@@ -81,7 +84,7 @@ export function Hero() {
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
-                onClick={openModal}
+                onClick={() => setIsLearnMoreOpen(true)}
                 size="lg"
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-white/10 font-semibold"
@@ -149,6 +152,10 @@ export function Hero() {
           </div>
         </div>
       </div>
+      <LearnMoreModal
+        isOpen={isLearnMoreOpen}
+        onClose={() => setIsLearnMoreOpen(false)}
+      />
     </section>
   )
 }

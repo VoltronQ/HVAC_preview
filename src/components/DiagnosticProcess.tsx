@@ -47,9 +47,10 @@ export function DiagnosticProcess() {
         </div>
 
         <div className="relative">
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-navy-ocean opacity-30 transform -translate-x-1/2"></div>
+          {/* Central Vertical Line (Desktop Only) */}
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-12 lg:space-y-0">
             {steps.map((step, index) => {
               const Icon = step.icon
               const isEven = index % 2 === 0
@@ -57,35 +58,31 @@ export function DiagnosticProcess() {
               return (
                 <div
                   key={index}
-                  className="relative animate-slide-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="relative lg:grid lg:grid-cols-2 lg:gap-x-24 items-center lg:py-10"
                 >
-                  <div
-                    className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${
-                      !isEven && 'lg:grid-cols-2 lg:auto-cols-max lg:[&>:first-child]:order-last'
-                    }`}
-                  >
-                    <div
-                      className={`${
-                        !isEven && 'lg:col-start-1'
-                      }`}
-                    >
-                      <div className="bg-gradient-navy-ocean rounded-lg p-8 text-white shadow-lg hover:shadow-xl transition-shadow group">
-                        <div className="flex items-center gap-4 mb-4">
-                          <div className="bg-white/20 rounded-full p-3 group-hover:bg-accent-orange/30 transition-colors">
-                            <Icon className="h-6 w-6" />
-                          </div>
-                          <span className="text-lg font-bold opacity-60">
-                            Step {index + 1}
-                          </span>
-                        </div>
-                        <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
-                        <p className="text-white/90">{step.description}</p>
-                      </div>
+                  {/* Timeline Dot (Desktop Only) */}
+                  <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform">
+                    <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center shadow-sm border-2 border-accent-orange">
+                      <div className="w-2 h-2 bg-accent-orange rounded-full"></div>
                     </div>
+                  </div>
 
-                    <div className="hidden lg:flex justify-center">
-                      <div className="absolute left-1/2 w-6 h-6 bg-accent-orange rounded-full transform -translate-x-1/2 border-4 border-white shadow-lg"></div>
+                  {/* Card Section */}
+                  <div className={`
+                    relative animate-slide-up
+                    ${isEven ? 'lg:col-start-1 lg:text-right' : 'lg:col-start-2'}
+                  `} style={{ animationDelay: `${index * 100}ms` }}>
+                    <div className={`
+                      bg-gradient-navy-ocean rounded-2xl p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform lg:hover:scale-[1.01] group
+                    `}>
+                      <div className={`flex items-center gap-4 mb-4 ${isEven ? 'lg:flex-row-reverse' : ''}`}>
+                        <div className="bg-white/10 rounded-xl p-3 group-hover:bg-accent-orange/20 transition-colors">
+                          <Icon className="h-6 w-6" />
+                        </div>
+                        <span className="text-sm font-bold text-accent-orange tracking-widest uppercase opacity-80">Phase 0{index + 1}</span>
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2 group-hover:text-accent-orange transition-colors">{step.title}</h3>
+                      <p className="text-blue-50/90 leading-relaxed">{step.description}</p>
                     </div>
                   </div>
                 </div>

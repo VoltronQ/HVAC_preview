@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button'
-import { useBookingModal } from '@/hooks/useBookingModal'
 import { Shield, Truck, Clock } from 'lucide-react'
 
 const trustItems = [
@@ -21,7 +20,6 @@ const trustItems = [
 ]
 
 export function Trust() {
-  const { openModal } = useBookingModal()
 
   return (
     <section className="bg-navy text-white py-12 sm:py-16 lg:py-20">
@@ -48,11 +46,11 @@ export function Trust() {
             Why wait for your HVAC system to fail completely? Early diagnosis can save thousands on emergency repairs.
           </p>
           <Button
-            onClick={openModal}
             size="lg"
-            className="bg-white text-navy hover:bg-gray-100"
+            variant="outline"
+            className="border-white text-white hover:bg-white/10"
           >
-            Schedule Your Visit Now
+            View Reviews
           </Button>
         </div>
       </div>
