@@ -9,6 +9,7 @@ import { FAQ } from './components/FAQ'
 import { FinalCTA } from './components/FinalCTA'
 import { Footer } from './components/Footer'
 import { MultiStepBookingForm } from './components/MultiStepBookingForm'
+import { ScrollToTop } from './components/ScrollToTop'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <FinalCTA />
       <Footer />
       <MultiStepBookingForm />
+      <ScrollToTop />
     </div>
   )
 }
