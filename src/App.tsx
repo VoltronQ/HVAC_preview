@@ -1,12 +1,14 @@
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { Symptoms } from './components/Symptoms'
+import { DiagnosticProcess } from './components/DiagnosticProcess'
+import { Testimonials } from './components/Testimonials'
 import { Process } from './components/Process'
 import { Trust } from './components/Trust'
 import { FAQ } from './components/FAQ'
 import { FinalCTA } from './components/FinalCTA'
 import { Footer } from './components/Footer'
-import { BookingModal } from './components/BookingModal'
+import { MultiStepBookingForm } from './components/MultiStepBookingForm'
 
 function App() {
   return (
@@ -14,12 +16,14 @@ function App() {
       <Navbar />
       <Hero />
       <Symptoms />
+      <DiagnosticProcess />
+      <Testimonials />
       <Process />
       <Trust />
       <FAQ />
       <FinalCTA />
       <Footer />
-      <BookingModal />
+      <MultiStepBookingForm />
     </div>
   )
 }
