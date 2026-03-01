@@ -5,26 +5,25 @@ This document outlines the strategy for elevating the HVAC project from a standa
 ## ✅ Checklist
 
 ### Phase 1: Typography & Foundation
-- [ ] Import "Outfit" (Google Fonts) for headlines and "Inter" for UI text.
-- [ ] Define custom "Glassmorphism" utility classes in `index.css`.
-- [ ] Implement a multi-layered shadow system for deep visual hierarchy.
-- [ ] Define high-fidelity color tokens (Deep Navy, Electric Orange, Glacier Blue).
+- [x] Import "Outfit" (Google Fonts) for headlines and "Inter" for UI text.
+- [x] Define custom "Glassmorphism" utility classes in `index.css`.
+- [x] Implement a multi-layered shadow system for deep visual hierarchy.
+- [x] Define high-fidelity color tokens (Deep Navy, Electric Orange, Glacier Blue).
 
 ### Phase 2: Hero "Wow" Factor
-- [ ] Replace static gradient with a multi-layered **Mesh Gradient** (animated/static).
-- [ ] Add a **Trust Badge Row** below the Hero text (NATE, BBB, 5-Star icons).
-- [ ] Implement an auto-scrolling **Professional Review Ticker** at the bottom of the Hero section.
-- [ ] Add 1px reflective "Edge Highlights" to the glass containers.
+- [x] Replace static gradient with a multi-layered **Mesh Gradient** (animated/static).
+- [x] Add a **Trust Badge Row** below the Hero text (NATE, BBB, 5-Star icons).
+- [x] Add 1px reflective "Edge Highlights" to the glass containers.
 
 ### Phase 3: Interactive "Symptom Checker"
-- [ ] Refactor `Symptoms.tsx` into a more interactive experience.
-- [ ] Add a "Diagnostic Recommender" logic: Selecting symptoms highlights the urgency.
-- [ ] Implement "Glow" effects on icon containers that activate on card hover.
+- [x] Refactor `Symptoms.tsx` into a more interactive experience.
+- [x] Add a "Diagnostic Recommender" logic: Selecting symptoms highlights the urgency.
+- [x] Implement "Glow" effects on icon containers that activate on card hover.
 
 ### Phase 4: High-Fidelity Process Visuals
-- [ ] Upgrade Lucide icons in `DiagnosticProcess.tsx` to **Duo-tone SVGs** with brand colors.
-- [ ] Implement a "Cold to Hot" color transition throughout the timeline sections.
-- [ ] Add a "Reveal" animation to the Learn More modal content (Progressive Disclosure).
+- [x] Upgrade Lucide icons in `DiagnosticProcess.tsx` to **Duo-tone SVGs** with brand colors.
+- [x] Implement a "Cold to Hot" color transition throughout the timeline sections.
+- [x] Add a "Reveal" animation to the Learn More modal content (Progressive Disclosure).
 
 ---
 
